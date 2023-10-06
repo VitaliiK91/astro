@@ -9,41 +9,100 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #0099cc;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home h1 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+#home p {
+    margin: 0;
+    color: #ffffff;
+}
+
+main {
+    padding: 2em;
+}
+
+#map-placeholder {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 2em 0;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: #c0e4fa;
+    border-radius: 8px;
+    position: relative;
+}
+
+#map::before {
+    content: 'Interactive Map Placeholder';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0077a3;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0099cc;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+		</style>
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to
-				build a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like
-				Tailwind, React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- <h1>Welcome to Paw Beach Adventures!</h1>
+            <p>Explore the whimsical universe of our animated furry friends!</p> -->
+			<section id="map-placeholder">
+				<h2>Discover Paw Beach</h2>
+				<div id="map">Interactive Map Here</div>
+			</section>
+			
 		</main>
 		<Footer />
 	</body>
